@@ -10,5 +10,81 @@ layout: layouts/base.njk
 stylesheet: ../../assets/styles/pricing.css
 script: '' 
 ---
+{# hero section #}
+<section id="hero">
+  <h1>Pricing</h1>
+</section>    
 
-<h1>Pricing Page</h1>
+{# pricing plans #}
+<section id="pricing-plans">
+  <div class="cards-wrapper">
+    {# free #}
+    {# !!! content #}
+    <div class="price-card">
+      <div class="text">
+        <h3>Plan</h3>
+        <p>description</p>
+        <p>price</p>
+      </div>
+
+      <ul>
+        <li>Transactions</li>
+        <li>Auth</li>
+        <li>Identity</li>
+        <li>Investments</li>
+        <li>Assets</li>
+        <li>Liabilities</li>  
+        <li>Income</li>  
+      </ul>  
+
+      <button>Request access</button>    
+    </div>
+    
+    {# basic #}
+    {# !!! content #}
+    <div class="price-card">
+      <div class="text">
+        <h3>Plan</h3>
+        <p>description</p>
+        <p>price</p>
+      </div>
+
+      <ul>
+        <li>Transactions</li>
+        <li>Auth</li>
+        <li>Identity</li>
+        <li>Investments</li>
+        <li>Assets</li>
+        <li>Liabilities</li>  
+        <li>Income</li>  
+      </ul>  
+
+      <button>Request access</button>    
+    </div>
+    
+    {# premium #}
+    {# !!! content #}
+    <div class="price-card">
+      <div class="text">
+        <h3>Plan</h3>
+        <p>description</p>
+        <p>price</p>
+      </div>
+
+      <ul>
+        <li>Transactions</li>
+        <li>Auth</li>
+        <li>Identity</li>
+        <li>Investments</li>
+        <li>Assets</li>
+        <li>Liabilities</li>  
+        <li>Income</li>  
+      </ul>  
+
+      <button>Request access</button>    
+    </div>    
+  </div>    
+</section>    
+
+{# call to action #}
+{% include "components/cta.njk" %}
