@@ -1,0 +1,22 @@
+<footer>
+   {# logo here #}
+  <a href="/" aria-label="back to home">
+    <img src="/assets/images/shared/desktop/logo.svg" alt="logo" aria-hidden="true" decoding="async" width="40" height="40">
+  </a>
+
+  <ul class="page-links">
+    {% set navPages = collections.all | eleventyNavigation %}
+     <!-- Loop through all pages with a eleventyNavigation in the frontmatter -->
+      {% for entry in navPages %}
+        {# don't show home page #}
+        {% if entry.key !== "Home" %}
+        <li>
+          <a href="{{ entry.url }}" class="{% if entry.url == page.url %} active {% endif %}">{{entry.key}}</a>
+        </li>
+        {% endif %}
+
+      {% endfor %}
+  </ul>
+
+  {# !!! social icons #}
+</footer>

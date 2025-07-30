@@ -1,0 +1,53 @@
+<!-- A fully fleshed-out <head>, dynamically changing based on client.json and the page front matter -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Standard meta tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="height=device-height, 
+                      width=device-width, initial-scale=1.0, 
+                      minimum-scale=1.0, maximum-scale=1.0, 
+                      user-scalable=no, target-densitydpi=device-dpi">
+    <meta name="description" content="{{ description }}">
+    <meta name="keywords" content="">
+
+    <link rel="icon" type="image/x-icon" href="/assets/images/shared/desktop/logo.svg">
+
+    <!-- Preloads -->
+    {# <link rel="preload" as="image" href="/assets/svgs/logo-white.svg"> #}
+    <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/dm-serif-display-v16-latin-regular.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/public-sans-v20-latin-regular.woff2" crossorigin>
+
+    <!-- Preload an image - tag not rendered if preloadImg is blank to stop console errors -->
+    {% if preloadImg != '' %}
+      <link rel="preload" as="image" href="{{ preloadImg }}" />
+    {% endif %}
+
+    <!-- Sitewide Stylesheets and Scripts -->
+    <link rel="stylesheet" href="/assets/styles/root.css">
+    <link rel="stylesheet" href="{{ stylesheet }}">
+    
+
+    {# services page script #}
+    {% if script != '' %}
+      <script defer src="{{ script }}"></script>
+    {% endif %}
+
+    <title>
+     {{ title }}
+    </title>
+  </head>
+  <body>
+    <!--Screen reader skip main nav-->
+    {# <a class="skip" aria-label="skip to main content" href="#main">Click To Skip To Main Content</a> #}
+
+    {% include "components/header.njk" %}
+    <main id="main">
+      {{ content | safe }}
+    </main>
+    {% include "components/footer.njk" %}
+
+  </body>
+</html>

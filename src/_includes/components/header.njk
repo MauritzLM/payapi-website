@@ -1,0 +1,39 @@
+<header id="navigation">
+
+  {# logo here #}
+  <a href="/" aria-label="back to home">
+  <img src="/assets/images/shared/desktop/logo.svg" alt="logo" aria-hidden="true" decoding="async" width="40" height="40">
+  </a>
+
+  <nav role="navigation">
+
+  <!--Mobile Nav Toggle-->
+    <button class="toggle" aria-label="mobile menu toggle">
+        <div class="box" aria-hidden="true">
+          <span class="line line1" aria-hidden="true"></span>
+          <span class="line line2" aria-hidden="true"></span>
+          <span class="line line3" aria-hidden="true"></span>
+        </div>
+    </button>
+
+   <div class="nav-ul-wrapper">
+    <ul class="nav-ul">
+        {% set navPages = collections.all | eleventyNavigation %}
+        <!-- Loop through all pages with a eleventyNavigation in the frontmatter -->
+        {% for entry in navPages %}
+
+          <li>
+            <a href="{{entry.url}}" class="{% if entry.url == page.url %} active {% endif %}">{{entry.key}}</a>
+          </li>
+
+        {% endfor %}
+
+      </ul>
+
+        {# contact button #}
+
+      <a href="/contact" class="button">Schedule a Demo</a>
+
+      </div>
+  </nav>
+</header>
