@@ -27,11 +27,19 @@ script: ''
     <p>At the core of our platform is the technical infrastructure APIs that connect consumers.
         Our innovative product provides key insights for businesses and individuals, as well as robust reporting for traditional financial institutions and developers. </p>
    </div>
-   {# !!! image #}
 </section>    
 
 {# info section #}
 <section id="info">
+   <picture>
+      <!-- Mobile image -->
+      <source media="(max-width: 700px)" srcset="/assets/images/about/mobile/image-team-members.jpg"/>
+      <!-- Desktop image --> 
+      <source media="(min-width: 701px)" srcset="/assets/images/about/desktop/image-team-members.jpg"/>
+      <!-- Fallback image -->
+      <img src="/assets/images/about/desktop/image-team-members.jpg" alt="building" aria-hidden="true" decoding="async" width="1440" height="500" loading="eager"/> 
+    </picture>
+
   <div class="numbers">
     <div>
         <span>300+</span>
