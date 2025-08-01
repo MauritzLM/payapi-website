@@ -96,6 +96,15 @@ h4 {
     font-family: 'DM Serif Display';
     letter-spacing: .5px;
     color: var(--SanJuanBlue);
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+h2 {
+    font-size: 32px;
 }
 
 p {
@@ -113,7 +122,16 @@ ul {
     padding: 0;
 }
 
+input {
+    font: inherit;
+}
+
 /* buttons */
+button {
+    cursor: pointer;
+    font: inherit;
+}
+
 .button-primary {
     background-color: var(--DarkPink);
     border-radius: 24px;
@@ -122,6 +140,7 @@ ul {
     color: var(--LinkWaterWhite);
     border: none;
     font-weight: bold;
+    display: inline-block;
 }
 
 .button-secondary-light {
@@ -131,6 +150,7 @@ ul {
     color: var(--LinkWaterWhite);
     padding: 16px 32px;
     font-weight: bold;
+    display: inline-block;
     /* !!! hover */
 }
 
@@ -139,8 +159,16 @@ ul {
     border-radius: 24px;
     border: 1px solid var(--SanJuanBlue);
     color: var(--SanJuanBlue);
-    padding: 16px 32px;
+    padding: 16px 28px;
     font-weight: bold;
+    display: inline-block;
+}
+
+/* images */
+picture {
+    display: block;
+    width: 100%;
+    height: 100%;
 }
 
 img {
@@ -148,10 +176,16 @@ img {
     height: auto;
 }
 
+/* layout */
+section {
+    padding: 80px 24px;
+    text-align: center;
+}
+
 /* NAV STYLES */
 #navigation {
     width: 100vw;
-    padding: 40px 24px;
+    padding: 40px 24px 0 24px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "logo toggle";
@@ -304,5 +338,81 @@ img {
         /* .button {
             margin-top: 2em;
         } */
+    }
+}
+
+
+/* call to action */
+#cta {
+    padding-top: 0;
+
+    form {
+        margin-top: 24px;
+
+        .form-group {
+            position: relative;
+        }
+
+        label {
+            position: absolute;
+            font-weight: bold;
+            color: var(--LightSanJuanBlue);
+            font-size: 15px;
+            top: 16px;
+            left: 27px;
+        }
+
+        input {
+            border: none;
+            padding: 16px 27px;
+            border-radius: 24px;
+            width: 100%;
+        }
+
+        button[type="submit"] {
+            width: 100%;
+            margin-top: 16px;
+            margin-bottom: 24px;
+        }
+    }
+}
+
+/* footer */
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    background-color: var(--MirageBlue);
+    padding: 50px;
+    background-image: url("/assets/images/shared/desktop/bg-pattern-circle.svg");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-position-y: 180px;
+
+    .logo {
+        svg {
+            g {
+                fill: var(--LinkWaterWhite);
+            }
+        }
+    }
+
+    .page-links {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+
+        a {
+            font-weight: bold;
+        }
+    }
+
+    .social-links {
+        display: flex;
+        gap: 24px;
+        align-items: center;
     }
 }
