@@ -1,0 +1,60 @@
+/* PRICING PAGE STYLES */
+
+/* hero */
+#hero {
+    padding-bottom: 0;
+    padding-top: 48px;
+}
+
+/* pricing plans */
+#pricing-plans {
+    .cards-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 48px;
+    }
+
+    .pricing-card {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        align-items: center;
+
+        .text {
+            h3 {
+                font-size: 24px;
+                color: var(--DarkPink);
+                margin-bottom: 17px;
+            }
+
+            .price {
+                margin-top: 17px;
+                font-family: 'DM Serif Display';
+                font-size: 56px;
+                color: var(--SanJuanBlue);
+            }
+
+        }
+
+        ul {
+            padding: 24px 0;
+            border-top: 1px solid #97979744;
+            border-bottom: 1px solid #97979744;
+            margin-top: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 100%;
+
+            li {
+                color: var(--SanJuanBlue);
+            }
+            
+            /* !!! disabled list item */
+        }
+
+        button {
+            width: auto;
+        }
+    }
+}

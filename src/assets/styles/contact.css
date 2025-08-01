@@ -1,0 +1,60 @@
+/* CONTACT PAGE STYLES */
+/* hero */
+#hero {
+    padding-top: 48px;
+    padding-bottom: 0;
+    /* display: flex;
+    flex-direction: column;
+    gap: 48px; */
+
+    h1 {
+        margin-bottom: 40px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        position: relative;
+        width: 100%;
+
+        /* .form-group {} */
+
+        label {
+            position: absolute;
+            left: 20px;
+            color: var(--SanJuanBlue);
+            opacity: .5;
+        }
+
+        input,
+        textarea {
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid #36536b86;
+            width: 100%;
+            padding: 0 20px 17px 20px;
+        }
+
+        button[type="submit"] {
+            width: fit-content;
+            padding: 16px 50px;
+            margin-top: 24px;
+        }
+    }
+}
+
+/* partners */
+#partners {
+    h2 {
+        font-size: 24px;
+        opacity: .75;
+        margin-bottom: 40px;
+    }
+
+    .icons {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 40px;
+    }
+}
