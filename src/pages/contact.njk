@@ -18,36 +18,37 @@ script: ''
 <form>
    {# name #}
    <div class="form-group">
-     <label for="">Name</label>
-     <input id="" name="" type="text"/>
+     <label for="name">Name</label>
+     <input id="name" name="name" type="text"/>
    </div>
    
    {# email #}
    <div class="form-group">
-     <label for="">Email address</label>
-     <input id="" name="" type="email"/>
+     <label for="email">Email address</label>
+     <input id="email" name="email" type="email"/>
    </div>
    
    {# company name #}
    <div class="form-group">
-     <label for="">Company Name</label>
-     <input id="" name="" type="text"/>
+     <label for="company">Company Name</label>
+     <input id="company" name="company" type="text"/>
    </div>
    
    {# title #}
    <div class="form-group">
-     <label for="">Title</label>
-     <input id="" name="" type="text"/>
+     <label for="title">Title</label>
+     <input id="title" name="title" type="text"/>
    </div> 
 
    <div class="form-group">
-     <label for="">Message</label>
-     <textarea id="" name=""></textarea>
+     <label for="message">Message</label>
+     <textarea id="message" name="message"></textarea>
    </div>  
    
-   <div class="form-group">
-     <label>Stay up-to-date with company announcements and updates to our API</label>
-     <input type="checkbox"/>
+   <div class="form-group non-text">
+     <label for="opt-in">Stay up-to-date with company announcements and updates to our API</label>
+     <input type="checkbox" id="opt-in" name="opt-in"/>
+     <svg width="14" height="11" xmlns="http://www.w3.org/2000/svg"><path d="M1 5.718L4.893 9.56l8.107-8" stroke="#FFF" stroke-width="2" fill="none" fill-rule="evenodd"/></svg>
    </div>
 
    <button class="button-secondary-dark" type="submit">Submit</button>
