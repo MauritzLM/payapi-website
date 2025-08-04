@@ -1,13 +1,16 @@
 /* PRICING PAGE STYLES */
 
-/* hero */
+/* HERO */
 #hero {
     padding-bottom: 0;
     padding-top: 48px;
 }
 
-/* pricing plans */
+
+/* PRICING PLANS */
 #pricing-plans {
+    padding-top: 48px;
+
     .cards-wrapper {
         display: flex;
         flex-direction: column;
@@ -24,11 +27,15 @@
             h3 {
                 font-size: 24px;
                 color: var(--DarkPink);
-                margin-bottom: 17px;
+                /* margin-bottom: 17px; */
+            }
+
+            p {
+                margin-top: 17px;
+                margin-bottom: 8px
             }
 
             .price {
-                margin-top: 17px;
                 font-family: 'DM Serif Display';
                 font-size: 56px;
                 color: var(--SanJuanBlue);
@@ -36,25 +43,54 @@
 
         }
 
-        ul {
-            padding: 24px 0;
+        .list-wrapper {
+            margin-top: 24px;
             border-top: 1px solid #97979744;
             border-bottom: 1px solid #97979744;
-            margin-top: 24px;
+            width: 100%;
+        }
+
+        ul {
+            padding: 24px 0;
             display: flex;
             flex-direction: column;
             gap: 10px;
-            width: 100%;
+            width: fit-content;
+            margin: auto;
 
             li {
                 color: var(--SanJuanBlue);
+                display: flex;
+                gap: 30px;
+                justify-items: start;
+
             }
-            
+
             /* !!! disabled list item */
+            .disabled {
+                opacity: .5;
+                    
+                span {
+                    /* margin - width of svg */
+                    &:nth-child(2) {
+                        margin-left: 14px;
+                    }
+                }
+            }
         }
 
         button {
             width: auto;
+        }
+    }
+}
+
+/* tablet */
+@media screen and (min-width: 760px) {
+    #pricing-plans {
+        .cards-wrapper {
+            flex-direction: row;
+            gap: 12px;
         }
     }
 }

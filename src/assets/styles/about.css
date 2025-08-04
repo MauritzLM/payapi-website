@@ -1,6 +1,6 @@
 /* ABOUT PAGE STYLES */
-/* hero */
 
+/* HERO */
 #hero {
     padding-top: 48px;
     padding-bottom: 0;
@@ -16,7 +16,31 @@
     }
 }
 
-/* info section */
+/* tablet */
+@media screen and (min-width: 760px) {
+    #hero {
+
+        h1 {
+            width: 573px;
+            margin: auto;
+            font-size: 48px;
+        }
+
+        div {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 40px;
+            text-align: left;
+
+            h2 {
+                min-width: max-content;
+                font-size: 32px;
+            }
+        }
+    }
+}
+
+/* INFO SECTION */
 #info {
     display: flex;
     flex-direction: column;
@@ -51,6 +75,37 @@
                     color: var(--DarkPink);
                     opacity: 1;
                 }
+            }
+        }
+    }
+}
+
+/* tablet */
+@media screen and (min-width: 760px) {
+    #info {
+        .numbers {
+            flex-direction: row;
+            border: none;
+            gap: 10px;
+
+            div {
+                border-top: 1px solid #97979744;
+                border-bottom: 1px solid #97979744;
+                padding: 16px 0;
+                flex: 30;
+                align-items: flex-start;
+            }
+        }
+
+        .text {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 40px;
+            text-align: left;
+
+            h2 {
+                min-width: max-content;
+                font-size: 32px;
             }
         }
     }
