@@ -40,6 +40,19 @@
     }
 }
 
+/* desktop */
+@media screen and (min-width: 1200px) {
+    #hero {
+        h1 {
+            text-align: left;
+            width: 730px;
+            margin: 0;
+            margin-bottom: 50px;
+            font-size: 56px;
+        }
+    }
+}
+
 /* INFO SECTION */
 #info {
     display: flex;
@@ -107,6 +120,16 @@
                 min-width: max-content;
                 font-size: 32px;
             }
+        }
+    }
+}
+
+/* desktop */
+@media screen and (min-width: 1200px) {
+    #info {
+        .text {
+            max-width: 920px;
+            margin: auto;
         }
     }
 }

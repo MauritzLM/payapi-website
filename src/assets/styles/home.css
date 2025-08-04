@@ -77,6 +77,35 @@
 
 }
 
+/* desktop */
+@media screen and (min-width: 1200px) {
+    #hero {
+        display: flex;
+        align-items: center;
+
+        picture {
+            order: 1;
+        }
+
+        h1 {
+            font-size: 72px;
+            max-width: none;
+            text-align: left;
+            line-height: 72px;
+        }
+
+        form {
+            margin: 0;
+            margin-top: 24px;
+
+            p {
+                text-align: left;
+                padding-left: 27px;
+            }
+        }
+    }
+}
+
 /* PARTNERS */
 #partners {
     background-color: var(--MirageBlue);
@@ -114,9 +143,37 @@
             grid-template-columns: 1fr 1fr 1fr;
         }
 
+        h2 {
+            font-size: 48px;
+            margin-top: 0;
+        }
+
         .text {
             max-width: 460px;
             margin: auto;
+        }
+    }
+}
+
+/* desktop */
+@media screen and (min-width: 1200px) {
+    #partners {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .icons {
+            order: 1;
+            align-items: center;
+            column-gap: 60px;
+            row-gap: 40px;
+            height: fit-content;
+        }
+
+        .text {
+            margin: 0;
+            text-align: left;
+            flex: 30;
         }
     }
 }
@@ -147,6 +204,19 @@
     }
 }
 
+/* desktop */
+@media screen and (min-width: 1200px) {
+    #sbs-l {
+        display: flex;
+        text-align: left;
+        align-items: center;
+
+        h2 {
+            font-size: 48px;
+        }
+    }
+}
+
 /* SBS-R (simple ui & ux) */
 #sbs-r {
     padding-bottom: 0;
@@ -172,6 +242,24 @@
         }
     }
 }
+
+/* desktop */
+@media screen and (min-width: 1200px) {
+    #sbs-r {
+        display: flex;
+        text-align: left;
+        align-items: center;
+
+        picture {
+            order: 1;
+        }
+
+        h2 {
+            font-size: 48px;
+        }
+    }
+}
+
 
 /* FEATURES */
 #features {
@@ -204,6 +292,15 @@
             gap: 10px;
             flex-direction: row;
             justify-content: space-between;
+        }
+    }
+}
+
+/* desktop */
+@media screen and (min-width: 1200px) {
+    #features {
+        ul {
+            gap: 30px;
         }
     }
 }
