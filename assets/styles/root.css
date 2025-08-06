@@ -77,16 +77,27 @@ html {
     background-color: var(--BodyBackgroundColor);
 }
 
+/* background image */
 body {
-    /* min-height: 100vh;
-    display: grid;
-    grid-template-rows: auto 1fr auto; */
     background-image: url("/assets/images/shared/desktop/bg-pattern-circle.svg");
     background-repeat: no-repeat;
-    background-position: top;
-    background-position-y: -400px;
-    /* background-size: contain; */
+    background-position: top -650px right -500px;
 }
+
+/* tablet */
+@media screen and (min-width: 700px) {
+    body {
+        background-position: top -490px right -520px;
+    }
+}
+
+/* desktop */
+@media screen and (min-width: 1200px) {
+    body {
+        background-position: top -520px right -140px;
+    }
+}
+
 
 /* TYPOGRAPHY */
 h1,
@@ -122,8 +133,11 @@ ul {
     padding: 0;
 }
 
-input {
+input,
+textarea,
+label {
     font: inherit;
+    cursor: pointer;
 }
 
 /* buttons */
@@ -142,6 +156,10 @@ button {
     border: none;
     font-weight: bold;
     display: inline-block;
+
+    &:hover {
+        background-color: var(--CharmPink);
+    }
 }
 
 .button-secondary-light {
@@ -152,7 +170,11 @@ button {
     padding: 16px 32px;
     font-weight: bold;
     display: inline-block;
-    /* !!! hover */
+
+    &:hover {
+        background-color: var(--LinkWaterWhite);
+        color: var(--MirageBlue);
+    }
 }
 
 .button-secondary-dark {
@@ -163,9 +185,29 @@ button {
     padding: 16px 28px;
     font-weight: bold;
     display: inline-block;
+
+    &:hover {
+        background-color: var(--SanJuanBlue);
+        color: var(--LinkWaterWhite);
+    }
 }
 
 /* images */
+#main {
+    z-index: 10;
+    position: relative;
+
+    .background-image {
+        display: none;
+        position: absolute;
+        width: 780px;
+        height: 780px;
+        top: -560px;
+        right: -20%;
+        z-index: -10;
+    }
+}
+
 picture {
     display: block;
     width: 100%;
@@ -204,12 +246,13 @@ section {
 
 /* NAV STYLES */
 #navigation {
-    width: 100vw;
+    /* width: 100vw; */
     padding: 40px 24px 0 24px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "logo toggle";
     align-items: center;
+    position: relative;
     z-index: 1000;
 
     .nav-logo {
@@ -347,10 +390,6 @@ section {
                 a {
                     font-size: 20px;
                     font-weight: bold;
-
-                    &:hover {
-                        color: var(--grey-700);
-                    }
                 }
             }
         }
@@ -389,8 +428,9 @@ section {
                 padding: 0;
                 flex-direction: row;
                 border: none;
-                justify-content: center;
+                justify-content: flex-start;
                 gap: 40px;
+                padding-left: 64px;
 
                 li {
                     a {
@@ -425,6 +465,13 @@ section {
 
         .form-group {
             position: relative;
+        }
+
+        .text-group {
+            label {
+                top: 0;
+                opacity: 0;
+            }
         }
 
         label {
@@ -538,6 +585,7 @@ footer {
         justify-content: flex-start;
         gap: 64px;
         padding: 31px 40px;
+        background-image: none;
 
         .page-links {
             flex-direction: row;

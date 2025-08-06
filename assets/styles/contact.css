@@ -47,6 +47,13 @@
         position: relative;
         width: 100%;
 
+        .text-group {
+            label {
+                top: 0;
+                opacity: 0;
+            }
+        }
+
         .non-text {
             display: flex;
             align-items: center;
@@ -163,7 +170,7 @@
         h2 {
             text-align: left;
         }
-        
+
         .icons {
             justify-items: start
         }
