@@ -1,0 +1,381 @@
+/* HOME PAGE STYLES */
+/* background image */
+body {
+    background-image: url("../assets/images/shared/desktop/bg-pattern-circle.svg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-position-y: -450px;
+
+}
+
+/* tablet bg */
+@media screen and (min-width: 700px) {
+    body {
+        background-position-y: -400px;
+    }
+}
+
+@media screen and (min-width: 790px) {
+    body {
+        background-position: top -400px right -400px;
+    }
+}
+
+/* desktop */
+@media screen and (min-width: 1200px) {
+    body {
+        background-position: top -270px right -200px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    body {
+        background-position: top -170px right -140px;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    body {
+        background-position: top -200px right -50px;
+    }
+}
+
+/* HERO */
+#hero {
+    padding-top: 0;
+
+    picture {
+        img {
+            max-width: 400px;
+        }
+    }
+
+    form {
+        margin-top: 24px;
+
+        .form-group {
+            position: relative;
+        }
+
+        .text-group {
+            label {
+                top: 0;
+                opacity: 0;
+            }
+        }
+
+        label {
+            position: absolute;
+            font-weight: bold;
+            color: var(--LightSanJuanBlue);
+            font-size: 15px;
+            top: 16px;
+            left: 27px;
+        }
+
+        input {
+            border: none;
+            padding: 16px 27px;
+            border-radius: 24px;
+            width: 100%;
+        }
+
+        button[type="submit"] {
+            width: 100%;
+            margin-top: 16px;
+            margin-bottom: 24px;
+        }
+
+        p {
+            margin-top: 16px;
+
+            a {
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+/* tablet */
+@media screen and (min-width: 700px) {
+    #hero {
+        h1 {
+            max-width: 570px;
+            margin: auto;
+            font-size: 48px;
+        }
+
+        form {
+            max-width: 450px;
+            margin: auto;
+            margin-top: 24px;
+            position: relative;
+
+            button[type="submit"] {
+                width: fit-content;
+                position: absolute;
+                top: 0;
+                right: 0;
+                margin: 0;
+                padding: 16px 24px;
+            }
+        }
+    }
+
+}
+
+/* desktop */
+@media screen and (min-width: 1200px) {
+    #hero {
+        display: flex;
+        align-items: center;
+
+        picture {
+            order: 1;
+
+            img {
+                max-width: 500px;
+            }
+        }
+
+        h1 {
+            font-size: 72px;
+            width: 700px;
+            text-align: left;
+            line-height: 72px;
+        }
+
+        form {
+            margin: 0;
+            margin-top: 24px;
+
+            p {
+                text-align: left;
+                padding-left: 27px;
+            }
+        }
+    }
+}
+
+/* PARTNERS */
+#partners {
+    background-color: var(--MirageBlue);
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+
+    svg {
+        path {
+            fill: var(--LinkWaterWhite);
+        }
+    }
+
+    h2 {
+        color: var(--LinkWaterWhite);
+        font-size: 32px;
+        margin-bottom: 16px;
+    }
+
+    p {
+        margin-bottom: 32px;
+        color: var(--LinkWaterWhite);
+    }
+
+    .icons {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 40px;
+        justify-items: center;
+    }
+}
+
+/* tablet */
+@media screen and (min-width: 700px) {
+    #partners {
+        gap: 64px;
+
+        .icons {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        h2 {
+            font-size: 48px;
+            margin-top: 0;
+        }
+
+        .text {
+            max-width: 460px;
+            margin: auto;
+        }
+    }
+}
+
+/* desktop */
+@media screen and (min-width: 1200px) {
+    #partners {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        .icons {
+            order: 1;
+            align-items: center;
+            column-gap: 60px;
+            row-gap: 40px;
+            height: fit-content;
+        }
+
+        .text {
+            margin: 0;
+            text-align: left;
+            flex: 30;
+        }
+    }
+}
+
+/* SBS-L (easy to implement section) */
+#sbs-l {
+    padding-bottom: 0;
+
+    picture {
+        img {
+            max-width: 600px;
+        }
+    }
+
+    h2 {
+        font-size: 36px;
+        margin-bottom: 24px;
+    }
+}
+
+/* tablet */
+@media screen and (min-width: 700px) {
+    #sbs-l {
+
+        .text {
+            max-width: 573px;
+            margin: auto;
+        }
+    }
+}
+
+/* desktop */
+@media screen and (min-width: 1200px) {
+    #sbs-l {
+        display: flex;
+        text-align: left;
+        align-items: center;
+
+        h2 {
+            font-size: 48px;
+        }
+
+        picture {
+            img {
+                max-width: none;
+            }
+        }
+    }
+}
+
+/* SBS-R (simple ui & ux) */
+#sbs-r {
+    padding-bottom: 0;
+
+
+    picture {
+        img {
+            max-width: 600px;
+        }
+    }
+
+    h2 {
+        font-size: 36px;
+        margin-bottom: 24px;
+    }
+}
+
+/* tablet */
+@media screen and (min-width: 700px) {
+    #sbs-r {
+        padding-top: 100px;
+
+        .text {
+            max-width: 573px;
+            margin: auto;
+        }
+
+
+    }
+}
+
+/* desktop */
+@media screen and (min-width: 1200px) {
+    #sbs-r {
+        display: flex;
+        text-align: left;
+        align-items: center;
+
+        picture {
+            order: 1;
+
+            img {
+                max-width: none;
+            }
+        }
+
+        h2 {
+            font-size: 48px;
+        }
+
+    }
+}
+
+
+/* FEATURES */
+#features {
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 48px;
+
+        li {
+            text-align: center;
+
+            svg {
+                height: 106px;
+                width: 106px;
+            }
+
+            h3 {
+                font-size: 18px;
+                margin-top: 32px;
+                margin-bottom: 16px;
+            }
+        }
+    }
+}
+
+/* tablet */
+@media screen and (min-width: 750px) {
+    #features {
+        padding-top: 100px;
+        padding-bottom: 100px;
+
+        ul {
+            gap: 10px;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+}
+
+/* desktop */
+@media screen and (min-width: 1200px) {
+    #features {
+        ul {
+            gap: 30px;
+        }
+    }
+}

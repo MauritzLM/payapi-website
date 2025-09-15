@@ -1,0 +1,133 @@
+/* PRICING PAGE STYLES */
+
+/* HERO */
+#hero {
+    padding-bottom: 0;
+    padding-top: 48px;
+}
+
+/* tablet */
+@media screen and (min-width: 760px) {
+    #hero {
+        padding-top: 75px;
+    }
+}
+
+/* desktop */
+@media screen and (min-width: 1200px) {
+    #hero {
+        h1 {
+            font-size: 56px;
+            text-align: left;
+        }
+    }
+}
+
+/* PRICING PLANS */
+#pricing-plans {
+    padding-top: 48px;
+
+    .cards-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 48px;
+    }
+
+    .pricing-card {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        align-items: center;
+
+        .text {
+            h3 {
+                font-size: 24px;
+                color: var(--DarkPink);
+                /* margin-bottom: 17px; */
+            }
+
+            p {
+                margin-top: 17px;
+                margin-bottom: 8px
+            }
+
+            .price {
+                font-family: 'DM Serif Display';
+                font-size: 56px;
+                color: var(--SanJuanBlue);
+            }
+
+        }
+
+        .list-wrapper {
+            margin-top: 24px;
+            border-top: 1px solid #97979744;
+            border-bottom: 1px solid #97979744;
+            width: 100%;
+        }
+
+        ul {
+            padding: 24px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: fit-content;
+            margin: auto;
+
+            li {
+                color: var(--SanJuanBlue);
+                display: flex;
+                gap: 30px;
+                justify-items: start;
+
+            }
+
+            /* !!! disabled list item */
+            .disabled {
+                opacity: .5;
+
+                span {
+
+                    /* margin - width of svg */
+                    &:nth-child(2) {
+                        margin-left: 14px;
+                    }
+                }
+            }
+        }
+
+        button {
+            width: auto;
+        }
+    }
+}
+
+/* tablet */
+@media screen and (min-width: 760px) {
+    #pricing-plans {
+        padding-bottom: 100px;
+
+        .cards-wrapper {
+            flex-direction: row;
+            gap: 12px;
+        }
+    }
+}
+
+/* desktop */
+@media screen and (min-width: 1200px) {
+    #pricing-plans {
+        .cards-wrapper {
+            gap: 30px;
+        }
+
+        .pricing-card {
+            align-items: flex-start;
+            text-align: left;
+
+            ul {
+                margin: 0;
+            }
+        }
+    }
+}

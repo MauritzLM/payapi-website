@@ -1,0 +1,178 @@
+/* CONTACT PAGE STYLES */
+
+/* HERO */
+#hero {
+    padding-top: 48px;
+    padding-bottom: 0;
+    /* display: flex;
+    flex-direction: column;
+    gap: 48px; */
+}
+
+/* tablet */
+@media screen and (min-width: 700px) {
+    #hero {
+        h1 {
+            max-width: 570px;
+            margin: auto;
+            margin-bottom: 54px;
+            font-size: 48px;
+        }
+    }
+}
+
+/* desktop */
+@media screen and (min-width: 1200px) {
+    #hero {
+        h1 {
+            font-size: 56px;
+            width: 730px;
+            margin: 0;
+            text-align: left;
+        }
+    }
+}
+
+/* PARTNERS */
+#partners {
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        position: relative;
+        width: 100%;
+
+        .text-group {
+            label {
+                top: 0;
+                opacity: 0;
+            }
+        }
+
+        .non-text {
+            display: flex;
+            align-items: center;
+            gap: 26px;
+
+            label {
+                position: relative;
+                order: 1;
+                opacity: 1;
+                text-align: left;
+            }
+
+            input {
+                appearance: none;
+                border: none;
+                height: 24px;
+                width: 24px;
+                background-color: #97979754;
+                position: relative;
+                padding: 12px;
+
+                &:checked {
+                    background-color: var(--DarkPink);
+
+                    svg {
+                        visibility: visible;
+                    }
+                }
+
+                &:checked+svg {
+                    visibility: visible;
+                }
+
+            }
+
+            svg {
+                position: absolute;
+                left: 5px;
+                visibility: hidden;
+            }
+        }
+
+        label {
+            position: absolute;
+            left: 20px;
+            color: var(--SanJuanBlue);
+            opacity: .5;
+        }
+
+        input,
+        textarea {
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid #36536b86;
+            width: 100%;
+            padding: 0 20px 17px 20px;
+        }
+
+        button[type="submit"] {
+            width: fit-content;
+            padding: 16px 50px;
+            margin-top: 24px;
+        }
+    }
+
+    h2 {
+        font-size: 24px;
+        opacity: .75;
+        margin-bottom: 40px;
+    }
+
+    .icons {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 40px;
+        justify-items: center;
+    }
+}
+
+/* tablet */
+@media screen and (min-width: 700px) {
+    #partners {
+
+        form {
+            max-width: 450px;
+            margin: auto;
+        }
+
+        h2 {
+            width: 540px;
+            margin: auto;
+            margin-bottom: 40px;
+        }
+
+        .icons {
+            grid-template-columns: 1fr 1fr 1fr;
+
+        }
+    }
+}
+
+/* desktop */
+@media screen and (min-width: 1200px) {
+    #partners {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 125px;
+
+        form {
+            width: 450px;
+            margin: 0;
+        }
+
+        h2 {
+            text-align: left;
+        }
+
+        .icons {
+            justify-items: start
+        }
+    }
+}
